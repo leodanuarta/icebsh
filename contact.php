@@ -1,5 +1,6 @@
 <?php
     $title = "Icaste - Tarumanagara University";
+    $activepage = "contact";
     include_once('./props/header.php');
 ?>
 

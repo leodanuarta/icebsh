@@ -33,11 +33,11 @@
     <body>
 
         <!-- Spinner Start -->
-        <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div> -->
+        </div>
         <!-- Spinner End -->
 
 
@@ -51,11 +51,33 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
+
+                <!-- query untuk menampilkan nama menu dari db -->
+                <?php
+                    include('./database/conn.php');
+
+                    $qry = "SELECT * FROM m_menu_nav";
+                    $result = mysqli_query($conn, $qry);
+                    
+                    // Set judul halaman
+                    if($result){
+                        $row = mysqli_fetch_array($result);
+                            $menu1 = $row["menu1"];
+                            $menu2 = $row["menu2"];
+                            $menu3 = $row["menu3"];
+                            $menu4 = $row["menu4"];
+                            $menu5 = $row["menu5"];
+                            $menu6 = $row["menu6"];
+                        
+                    }
+                    // Tutup koneksi
+                    $conn->close();
+                ?>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="index.php" class="nav-item nav-link active">Home</a>
-                        <a href="about.php" class="nav-item nav-link">About</a>
-                        <a href="service.php" class="nav-item nav-link">Services</a>
+                        <a href="index.php" class="nav-item nav-link <?=($activepage=='index'?"active":"")?>"><?php echo $menu1 ?></a>
+                        <a href="about.php" class="nav-item nav-link <?=($activepage=='about'?"active":"")?>"><?php echo $menu2 ?></a>
+                        <a href="service.php" class="nav-item nav-link <?=($activepage=='service'?"active":"")?>"><?php echo $menu3 ?></a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
@@ -67,8 +89,9 @@
                                 <a href="404.php" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
-                        <a href="contact.php" class="nav-item nav-link">Contact Us</a>
+                        <a href="contact.php" class="nav-item nav-link <?=($activepage=='contact'?"active":"")?>"><?php echo $menu4 ?></a>
+                        <a href="#" class="nav-item nav-link <?=($activepage==''?"active":"")?>"><?php echo $menu5 ?></a>
                     </div>
-                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Book Appointment</a>
+                    <button style="border: none; background-color: #fffff; color:#fffff;" disabled="true"><a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0" aria-disabled><?php echo $menu6 ?></a></button>
                 </div>
             </nav>
