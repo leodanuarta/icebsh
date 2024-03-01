@@ -1,10 +1,27 @@
+<?php
+    include './database/conn.php';
+    // $host = "127.0.0.1";
+    // $user = "root";
+    // $pass = "";
+    // $db = "icebsh";
+    // $conn = mysqli_connect($host,$user,$pass,$db);
+
+    $qry = "SELECT * FROM m_info";
+    $data = mysqli_query($conn, $qry);
+    $result = mysqli_fetch_array($data);
+
+    mysqli_close($conn);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
         <meta charset="utf-8">
         <!-- <title>Terapia - Physical Therapy Website Template</title> -->
-        <title><?php echo $title ?></title>
+        <title><?php echo $result['nama'] ?></title>
+        <link rel="icon" type="image/x-icon" href="./<?php echo $result['img_header'] ?>">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -33,11 +50,11 @@
     <body>
 
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div>
+        </div> -->
         <!-- Spinner End -->
 
 
@@ -45,8 +62,8 @@
         <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
                 <a href="index.php" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fas fa-star-of-life me-3"></i>ICASTE</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                        <img src="./<?php echo $result['img_header'] ?>" alt="Logo">
+                        <!-- <h1 class="text-primary m-0"><?php echo $result['nama'] ?></h1> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -77,7 +94,7 @@
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.php" class="nav-item nav-link <?=($activepage=='index'?"active":"")?>"><?php echo $menu1 ?></a>
                         <a href="about.php" class="nav-item nav-link <?=($activepage=='about'?"active":"")?>"><?php echo $menu2 ?></a>
-                        <a href="service.php" class="nav-item nav-link <?=($activepage=='service'?"active":"")?>"><?php echo $menu3 ?></a>
+                        <a href="callforpaper.php" class="nav-item nav-link <?=($activepage=='cop'?"active":"")?>"><?php echo $menu3 ?></a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">

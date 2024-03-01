@@ -2,7 +2,7 @@
     $host = "127.0.0.1";
     $user = "root";
     $pass = "";
-    $db = "icaste";
+    $db = "icebsh";
     $conn = mysqli_connect($host,$user,$pass,$db);
 
     // Periksa koneksi

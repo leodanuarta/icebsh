@@ -1,5 +1,4 @@
 <?php
-    $title = "Icaste - Tarumanagara University";
     include_once('./props/header.php');
 ?>
 
