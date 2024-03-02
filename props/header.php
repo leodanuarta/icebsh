@@ -93,9 +93,8 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.php" class="nav-item nav-link <?=($activepage=='index'?"active":"")?>"><?php echo $menu1 ?></a>
-                        <a href="about.php" class="nav-item nav-link <?=($activepage=='about'?"active":"")?>"><?php echo $menu2 ?></a>
                         <a href="callforpaper.php" class="nav-item nav-link <?=($activepage=='cop'?"active":"")?>"><?php echo $menu3 ?></a>
-                        <div class="nav-item dropdown">
+                        <!-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
                                 <a href="appointment.php" class="dropdown-item">Appointment</a>
@@ -105,10 +104,12 @@
                                 <a href="testimonial.php" class="dropdown-item">Testimonial</a>
                                 <a href="404.php" class="dropdown-item">404 Page</a>
                             </div>
-                        </div>
-                        <a href="contact.php" class="nav-item nav-link <?=($activepage=='contact'?"active":"")?>"><?php echo $menu4 ?></a>
-                        <a href="#" class="nav-item nav-link <?=($activepage==''?"active":"")?>"><?php echo $menu5 ?></a>
+                        </div> -->
+                        <a href="submission.php" class="nav-item nav-link <?=($activepage=='submission'?"active":"")?>"><?php echo $menu4 ?></a>
+                        <a href="committee.php" class="nav-item nav-link <?=($activepage=='committee'?"active":"")?>">COMMITTEE</a>
+
+                        <a href="contact.php" class="nav-item nav-link <?=($activepage=='contact'?"active":"")?>">CONTACT</a>
                     </div>
-                    <button style="border: none; background-color: #fffff; color:#fffff;" disabled="true"><a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0" aria-disabled><?php echo $menu6 ?></a></button>
+                    <button style="border: none; background-color: #fffff; color:#fffff; cursor: not-allowed; pointer-events: none; opacity: 0.6;" disabled="" ><a href="#" style="" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0" aria-disabled><?php echo $menu6 ?></a></button>
                 </div>
             </nav>
