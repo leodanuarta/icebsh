@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-white">Copyright <a href="#"><i class="fas fa-copyright text-light me-2"></i><?php echo $result['nama'] ?> </a><?php echo date("Y"); ?></span>
+                        <span class="text-white">Copyright <a href="#"><i class="fas fa-copyright text-light me-2"></i><?php echo $result['nama'] ?> - Universitas Tarumanagara </a><?php echo date("Y"); ?></span>
                     </div>
                 </div>
             </div>

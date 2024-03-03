@@ -74,7 +74,7 @@
         <!-- Speakers Start -->
         <div class="container-fluid service py-5">
             <div class="container py-5">
-                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s" style="text-align: justify;">
                     <h1 class="display-3 mb-4">SPEAKERS</h1>
                     <p class="mb-0" style="text-align: justify;"><?php echo $result['sub_judul1'] ?></p>
                 </div>
@@ -85,9 +85,9 @@
         <!-- Schedule Start -->
         <div class="container-fluid service py-5">
             <div class="container py-5">
-                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.4s" style="text-align: justify;">
                     <h1 class="display-3 mb-4">SCHEDULE</h1>
-                    <p class="mb-0" style="text-align: justify;"><?php echo $result['sub_judul2'] ?></p>
+                    <p class="mb-0" ><?php echo $result['sub_judul2'] ?></p>
                 </div>
             </div>
         </div>
