@@ -19,7 +19,6 @@
 
     <head>
         <meta charset="utf-8">
-        <!-- <title>Terapia - Physical Therapy Website Template</title> -->
         <title><?php echo $result['nama'] ?></title>
         <link rel="icon" type="image/x-icon" href="./<?php echo $result['img_header'] ?>">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
