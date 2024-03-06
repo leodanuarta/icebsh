@@ -1,9 +1,9 @@
 <?php
     $title = "Icaste - Tarumanagara University";
     $activepage = "index";
-    include_once('./props/header.php');
+    include_once('props/header.php');
 
-    include './database/conn.php';
+    include 'database/conn.php';
     $qry = "SELECT * FROM m_home WHERE id = 1";
     $data = mysqli_query($conn, $qry);
     $result = mysqli_fetch_array($data);
@@ -97,5 +97,5 @@
 
 
 <?php
-    include_once('./props/footer.php');
+    include_once('props/footer.php');
 ?>

@@ -1,5 +1,5 @@
 <?php
-    include './database/conn.php';
+    include 'database/conn.php';
 
     $qry = "SELECT * FROM m_info";
     $data = mysqli_query($conn, $qry);

@@ -1,6 +1,6 @@
 <?php
     $title = "Icaste - Tarumanagara University";
-    include_once('./props/header.php');
+    include_once('props/header.php');
 ?>
 
 
@@ -159,5 +159,5 @@
 
 
 <?php
-    include_once('./props/footer.php');
+    include_once('props/footer.php');
 ?>
