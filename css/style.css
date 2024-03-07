@@ -1152,7 +1152,7 @@
 
 /*** Footer Start ***/
 .footer {
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/banner.jpg);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1176,8 +1176,6 @@
 
 /*** copyright Start ***/
 .copyright {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
     bottom: 0;
     background: var(--bs-dark) !important;
 }

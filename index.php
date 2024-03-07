@@ -104,5 +104,5 @@
 
 
 <?php
-    include_once('props/footer.php');
+    include_once('props/backup_footer.php');
 ?>
