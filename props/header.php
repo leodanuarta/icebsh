@@ -59,7 +59,7 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="index.php" class="navbar-brand p-0">
                         <img src="./<?php echo $result['img_header'] ?>" alt="Logo">
                         <!-- <h1 class="text-primary m-0"><?php echo $result['nama'] ?></h1> -->

@@ -17,7 +17,7 @@
 ?>
 
             <!-- Carousel Start -->
-            <div class="header-carousel owl-carousel">
+            <div class="header-carousel owl-carousel ">
                 <?php while ($row = $data_img->fetch_array()) { ?>
                     <div class="header-carousel-item">
                         <img src=".<?php echo $row['nama_img'] ?>" class="img-fluid w-100" alt="Image">
