@@ -8,7 +8,7 @@
     $data = mysqli_query($conn, $qry);
     $result = mysqli_fetch_array($data);
 
-    $qry_img = "SELECT * FROM m_img_menu WHERE nama_menu = 'home    '";
+    $qry_img = "SELECT * FROM m_img_menu WHERE nama_menu = 'home'";
     $data_img = mysqli_query($conn, $qry_img);
     $result_img = mysqli_fetch_array($data_img);
 
@@ -21,10 +21,6 @@
                 <?php while ($row = $data_img->fetch_array()) { ?>
                     <div class="header-carousel-item">
                         <img src=".<?php echo $row['nama_img'] ?>" class="img-fluid w-100" alt="Image">
-                        <div class="carousel-caption">
-                            <div class="carousel-caption-content p-3">
-                            </div>
-                        </div>
                     </div>
                 <?php } ?>
             </div>
@@ -104,5 +100,5 @@
 
 
 <?php
-    include_once('props/backup_footer.php');
+    include_once('props/footer.php');
 ?>
